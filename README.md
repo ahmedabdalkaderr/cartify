@@ -98,18 +98,18 @@ http://localhost:3000/api
 
 1. **Authentication Workflow**:
    
-  Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
+  **Registration/Login**: Users register and log in, receiving a JWT upon successful authentication.
 
-  Token Storage: The JWT is stored securely (e.g., in local storage) on the client side. 
+  **Token Storage**: The JWT is stored securely (e.g., in local storage) on the client side. 
 
-  Request Authorization: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
+  **Request Authorization**: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
 
-  Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
+ **Role-Based Access Control**: The server checks the JWT and user role to ensure that the user can perform the requested actions.
 
 2. **User Roles and Actions**:
    
-  Admin: Add, view, modify, and delete users and vendors.
+  **Admin**: Add, view, modify, and delete users and vendors.
 
-  Customers: View current products and manage their shopping cart details (add, view, modify, delete items).
+  **Customers**: View current products and manage their shopping cart details (add, view, modify, delete items).
 
-  Vendors: Add, view, modify, and delete their products.
+ **Vendors**: Add, view, modify, and delete their products.
