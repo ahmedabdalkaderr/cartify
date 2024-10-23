@@ -26,7 +26,7 @@
 
 1. ERD Diagram
 
-![image](https://github.com/user-attachments/assets/9983b11e-b82b-413b-8faa-643f74326d81)
+![image](https://github.com/user-attachments/assets/0cb70435-9ee9-472f-b9ef-30b3cd158b03)
 
 As we see here we have 4 entities. and the relation between them as follows:
 One-to-Many between between vendor and product.
@@ -37,9 +37,8 @@ One-to_Many between cart and product.
 
 ![image](https://github.com/user-attachments/assets/172f366a-bc65-4171-939c-c6bfb19fe969)
 
-This diagram describe what each role can do in this app. I focused more on customer and vendors actoins instead of admin
+This diagram describe roles and actions in this app. I focused more on customer and vendor actoins instead of admin
 because i didn't implement auth module to handle these privileges.
-
 
 
 
@@ -97,12 +96,12 @@ http://localhost:3000/api
 ## Authentication Strategy
 
 1. Authentication Workflow:
-Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
-Token Storage: The JWT is stored securely (e.g., in local storage) on the client side.
-Request Authorization: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
-Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
+-Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
+-Token Storage: The JWT is stored securely (e.g., in local storage) on the client side.
+-Request Authorization: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
+-Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
 
-2. User Roles and Actions:
-Admin: Add, view, modify, and delete users and vendors.
-Customers: View current products and manage their shopping cart details (add, view, modify, delete items).
-Vendors: Add, view, modify, and delete their products.
+3. User Roles and Actions:
+-Admin: Add, view, modify, and delete users and vendors.
+-Customers: View current products and manage their shopping cart details (add, view, modify, delete items).
+-Vendors: Add, view, modify, and delete their products.
