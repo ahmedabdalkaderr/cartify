@@ -52,7 +52,7 @@ because i didn't implement auth module to handle these privileges.
  ```
 2. **Install dependencies**
 ```
-$ npm install
+  npm install
 ```
 3. **Setting Up MongoDB URI**
 
