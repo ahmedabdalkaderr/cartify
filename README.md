@@ -21,6 +21,7 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
   
 ## Database Design
 
@@ -44,7 +45,7 @@ because i didn't implement auth module to handle these privileges.
 
 ## Application Setup
 
-1. ***Clone the repository**
+1. **Clone the repository**
  ```bash
    git clone https://github.com/your-username/dinamo-task.git
    cd dinamo-task
