@@ -12,7 +12,7 @@ import { CartsModule } from './carts/carts.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: './src/.env',
+      envFilePath: './.env',
     }),
     MongooseModule.forRoot(process.env.URI),
     UserModule,
