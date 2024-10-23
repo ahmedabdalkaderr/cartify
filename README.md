@@ -56,7 +56,7 @@ $ npm install
 ```
 3. **Setting Up MongoDB URI**
 
-To connect to a MongoDB database, you need to set up a MongoDB URI. Create a .env file in the src directory of your project and add the following line:
+To connect to a MongoDB database, you need to set up a MongoDB URI. Create a .env file in the root directory of your project and add the following line:
 ```
 URI=mongodb://<username>:<password>@<host>:<port>/<database>
 ```
