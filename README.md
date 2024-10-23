@@ -29,10 +29,11 @@
 
 ![image](https://github.com/user-attachments/assets/0cb70435-9ee9-472f-b9ef-30b3cd158b03)
 
-  As we see here we have 4 entities. and the relation between them as follows:
-  One-to-Many between between vendor and product.
-  One-to-One between user and cart.
-  One-to_Many between cart and product.
+  As we see here we have 4 entities. The relation between them as follows
+  
+    One-to-Many between between vendor and product.
+    One-to-One between user and cart.
+    One-to_Many between cart and product.
 
 2. **Use Case Diagram**
 
