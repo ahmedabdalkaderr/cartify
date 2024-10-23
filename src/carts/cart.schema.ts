@@ -23,9 +23,6 @@ export class Cart {
   @Prop()
   totalCartPrice: number;
 
-  @Prop()
-  totalPriceAfterDiscount: number;
-
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   user: User;
 }
