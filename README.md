@@ -50,7 +50,7 @@ because i didn't implement auth module to handle these privileges.
    cd dinamo-task
  ```
 2. **Install dependencies**
-```bash
+```
 $ npm install
 ```
 3. **Setting Up MongoDB URI**
@@ -66,13 +66,13 @@ Or if you will use your local host (but be sure that mongodb is activated in you
 URI=mongodb://127.0.0.1:27017/dinamo-task
 ```
 4. **Running the app**
-```bash
+```
 # watch mode
 $ npm run start:dev
 ```
 5. **Testing**
 to run unit testing files:
-```bash
+```
 # unit tests
 $ npm run test
 ```
@@ -82,14 +82,14 @@ To view the full API documentation, follow these steps:
 
 1. **Start the Application**:
    Make sure your application is running. You can start it in development mode using:
-   ```bash
+   ```
    npm run start:dev
    ```
 
 2. **Open Swagger UI**:
  Once the application is running, open your web browser and navigate to:
 
-bash
+
 ```
 http://localhost:3000/api
 ```
