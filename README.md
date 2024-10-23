@@ -47,7 +47,7 @@ because i didn't implement auth module to handle these privileges.
 
 1. **Clone the repository**
  ```bash
-   git clone https://github.com/your-username/dinamo-task.git
+   git clone https://github.com/ahmedabdalkaderr/dinamo-task.git
    cd dinamo-task
  ```
 2. **Install dependencies**
