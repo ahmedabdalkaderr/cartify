@@ -26,7 +26,6 @@
 
 1. **ERD Diagram**
 
-
 ![image](https://github.com/user-attachments/assets/0cb70435-9ee9-472f-b9ef-30b3cd158b03)
 
 As we see here we have 4 entities. and the relation between them as follows:
@@ -55,6 +54,7 @@ because i didn't implement auth module to handle these privileges.
 $ npm install
 ```
 3. **Setting Up MongoDB URI**
+
 To connect to a MongoDB database, you need to set up a MongoDB URI. Create a .env file in the src directory of your project and add the following line:
 ```
 URI=mongodb://<username>:<password>@<host>:<port>/<database>
@@ -96,7 +96,7 @@ http://localhost:3000/api
 
 ## Authentication Strategy
 
-1. Authentication Workflow:
+1. **Authentication Workflow**:
    
 Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
 
@@ -106,7 +106,7 @@ Request Authorization: For each request, the JWT is sent in the HTTP headers to 
 
 Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
 
-3. User Roles and Actions:
+2. **User Roles and Actions**:
    
 Admin: Add, view, modify, and delete users and vendors.
 
