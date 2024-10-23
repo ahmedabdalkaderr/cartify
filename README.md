@@ -21,12 +21,49 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  
+## Database Design
+
+# 1. ERD Diagram
+
+![image](https://github.com/user-attachments/assets/48d0a52f-1960-4e98-a1b0-41e6568c4891)
+
+As we see here we have 4 entities. and the relation between them as follows:
+One-to-Many between between vendor and product.
+One-to-One between user and cart.
+One-to_Many between cart and product.
+
+# 2. Use Case Diagram
+
+![image](https://github.com/user-attachments/assets/172f366a-bc65-4171-939c-c6bfb19fe969)
+
+This diagram describe what each role can do in this app. I focused more on customer and vendors actoins instead of admin
+because i didn't implement auth module to handle these privileges.
 
 
-## Installation
 
+
+## Application Setup
+
+# 1. Clone the repository
+ ```bash
+   git clone https://github.com/your-username/dinamo-task.git
+   cd dinamo-task
+ ```
+# 2. Install dependencies
 ```bash
 $ npm install
+```
+# 3. Setting Up MongoDB URI
+To connect to a MongoDB database, you need to set up a MongoDB URI. Create a .env file in the src directory of your project and add the following line:
+```
+URI=mongodb://<username>:<password>@<host>:<port>/<database>
+```
+Replace <username>, <password>, <host>, <port>, and <database> with your actual MongoDB connection details. 
+
+Or if you will use your local host (but be sure that mongodb is activated in your device):
+```
+URI=mongodb://127.0.0.1:27017/dinamo-task
 ```
 
 ## Running the app
@@ -34,10 +71,30 @@ $ npm install
 ```bash
 # watch mode
 $ npm run start:dev
-
+```
 ## Test
-
+I you want to run unit testing file:
 ```bash
 # unit tests
 $ npm run test
+```
+
+## REST Endpoints
+To view the full API documentation, follow these steps:
+
+# 1. **Start the Application**:
+   Make sure your application is running. You can start it in development mode using:
+   ```bash
+   npm run start:dev
+   ```
+
+# 2. **Open Swagger UI**:
+ Once the application is running, open your web browser and navigate to:
+
+bash
+```
+http://localhost:3000/api
+```
+
+## Authentication Strategy
 
