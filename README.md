@@ -68,14 +68,12 @@ URI=mongodb://127.0.0.1:27017/dinamo-task
 ```
 4. **Running the app**
 ```
-# watch mode
-$ npm run start:dev
+ npm run start:dev
 ```
 5. **Testing**
 to run unit testing files:
 ```
-# unit tests
-$ npm run test
+ npm run test
 ```
 
 ## REST Endpoints
