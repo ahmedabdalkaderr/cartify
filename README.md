@@ -24,7 +24,8 @@
   
 ## Database Design
 
-1. ERD Diagram
+1. **ERD Diagram**
+
 
 ![image](https://github.com/user-attachments/assets/0cb70435-9ee9-472f-b9ef-30b3cd158b03)
 
@@ -33,7 +34,7 @@ One-to-Many between between vendor and product.
 One-to-One between user and cart.
 One-to_Many between cart and product.
 
-2. Use Case Diagram
+2. **Use Case Diagram**
 
 ![image](https://github.com/user-attachments/assets/172f366a-bc65-4171-939c-c6bfb19fe969)
 
@@ -44,16 +45,16 @@ because i didn't implement auth module to handle these privileges.
 
 ## Application Setup
 
-1. Clone the repository
+1. ***Clone the repository**
  ```bash
    git clone https://github.com/your-username/dinamo-task.git
    cd dinamo-task
  ```
-2. Install dependencies
+2. **Install dependencies**
 ```bash
 $ npm install
 ```
-3. Setting Up MongoDB URI
+3. **Setting Up MongoDB URI**
 To connect to a MongoDB database, you need to set up a MongoDB URI. Create a .env file in the src directory of your project and add the following line:
 ```
 URI=mongodb://<username>:<password>@<host>:<port>/<database>
@@ -64,12 +65,12 @@ Or if you will use your local host (but be sure that mongodb is activated in you
 ```
 URI=mongodb://127.0.0.1:27017/dinamo-task
 ```
-4. Running the app
+4. **Running the app**
 ```bash
 # watch mode
 $ npm run start:dev
 ```
-5. Testing
+5. **Testing**
 to run unit testing files:
 ```bash
 # unit tests
@@ -96,12 +97,19 @@ http://localhost:3000/api
 ## Authentication Strategy
 
 1. Authentication Workflow:
--Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
--Token Storage: The JWT is stored securely (e.g., in local storage) on the client side.
--Request Authorization: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
--Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
+   
+Registration/Login: Users register and log in, receiving a JWT upon successful authentication.
+
+Token Storage: The JWT is stored securely (e.g., in local storage) on the client side.
+
+Request Authorization: For each request, the JWT is sent in the HTTP headers to verify the user's identity and permissions.
+
+Role-Based Access Control: The server checks the JWT and user role to ensure that the user can perform the requested actions.
 
 3. User Roles and Actions:
--Admin: Add, view, modify, and delete users and vendors.
--Customers: View current products and manage their shopping cart details (add, view, modify, delete items).
--Vendors: Add, view, modify, and delete their products.
+   
+Admin: Add, view, modify, and delete users and vendors.
+
+Customers: View current products and manage their shopping cart details (add, view, modify, delete items).
+
+Vendors: Add, view, modify, and delete their products.
