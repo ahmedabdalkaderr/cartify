@@ -66,7 +66,7 @@ This project is a backend service designed for managing a simple e-commerce syst
     ```
     Replace username, password, host, port, and database with your actual MongoDB connection details. 
 
-    Or if you will use your local host (but be sure that mongodb is activated in your device):
+    Or if you will use your local host (**but be sure that mongodb is activated in your device**):
     ```
      URI=mongodb://127.0.0.1:27017/dinamo-task
     ```
