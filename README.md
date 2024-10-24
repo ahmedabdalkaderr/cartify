@@ -22,12 +22,16 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Project discription
+This project is a backend service designed for managing a simple e-commerce system. It includes essential entities like products, vendors, users, and carts. The system provides RESTful API endpoints to handle operations like adding products to the catalog, managing vendors and users, and processing carts. The application is built using NestJS for a scalable, modular architecture and MongoDB for database management, ensuring efficient handling of data and operations.
+
+
   
 ## Database Design
 
 1. **ERD Diagram**
 
-![image](https://github.com/user-attachments/assets/0cb70435-9ee9-472f-b9ef-30b3cd158b03)
+![image](https://github.com/user-attachments/assets/4509652f-74cc-4c8f-a0b3-4c4f1d525d35)
 
   As we see here we have 4 entities. The relation between them as follows
   
@@ -39,8 +43,8 @@
 
 ![image](https://github.com/user-attachments/assets/172f366a-bc65-4171-939c-c6bfb19fe969)
 
-  This diagram describe roles and actions in this app. I focused more on customer and vendor actoins instead of admin
-  because i didn't implement auth module to handle these privileges.
+  This diagram describe roles and actions in this app. I focused more on customer and vendor actions instead of admin
+  because i didn't implement auth module to handle some privileges.
 
 
 
@@ -105,6 +109,8 @@ To view the full API documentation, follow these steps:
 
 2. **User Roles and Actions**:
    
-   **Admin**: Add, view, modify, and delete users and vendor. 
+   **Admin**: Add, view, modify, and delete users and vendor.
+   
    **Customers**: View current products and manage their shopping cart details (add, view, modify, delete items).
+   
    **Vendors**: Add, view, modify, and delete their products.
