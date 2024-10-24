@@ -94,7 +94,7 @@ To view the full API documentation, follow these steps:
     ```
      http://localhost:3000/api
     ```
-    after naviagting you will see end points look like this :
+    after navigating you will see end points look like this :
      ![image](https://github.com/user-attachments/assets/a06978dc-ef81-414b-8fe4-7158024fed3e)
 
 ## Authentication Strategy
