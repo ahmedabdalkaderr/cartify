@@ -35,7 +35,7 @@ This project is a backend service designed for managing a simple e-commerce syst
 
   As we see here we have 4 entities. The relation between them as follows
   
-    One-to-Many between between vendor and product.
+    One-to-Many between vendor and product.
     One-to-One between user and cart.
     One-to_Many between cart and product.
 
