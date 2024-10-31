@@ -4,7 +4,6 @@ import { Model } from 'mongoose';
 import { Cart } from './cart.schema';
 import { Product } from '../products/product.schema';
 import { AddProductToCartDto } from './dtos/add-product.dto';
-import { ApiResponse } from '@nestjs/swagger';
 
 @Injectable()
 export class CartsService {
@@ -13,11 +12,6 @@ export class CartsService {
     @InjectModel(Product.name) private productModel: Model<Product>,
   ) {}
 
-  @ApiResponse({
-    status: 201,
-    description: 'Product added to cart successfully.',
-  })
-  @ApiResponse({ status: 404, description: 'Product not found.' })
   async addProductToCart(
     addProductToCartDto: AddProductToCartDto,
   ): Promise<Cart> {
@@ -31,7 +25,6 @@ export class CartsService {
     }
 
     let cart = await this.cartModel.findOne({ user: userId });
-
     if (!cart) {
       cart = await this.cartModel.create({
         user: userId,
@@ -55,7 +48,6 @@ export class CartsService {
 
     this.calculateTotalPrice(cart);
     await cart.save();
-
     return cart;
   }
 
@@ -66,12 +58,6 @@ export class CartsService {
     );
   }
 
-  @ApiResponse({
-    status: 200,
-    description: 'Retrieved user cart successfully.',
-  })
-  @ApiResponse({ status: 404, description: 'Cart not found.' })
-  @ApiResponse({ status: 400, description: 'Invalid mongo id format.' })
   async getUserCart(userId: string): Promise<Cart> {
     const cart = await this.cartModel.findOne({ user: userId }).populate({
       path: 'cartItems.product',
@@ -84,8 +70,6 @@ export class CartsService {
     return cart;
   }
 
-  @ApiResponse({ status: 200, description: 'Cart item removed successfully.' })
-  @ApiResponse({ status: 404, description: 'Cart not found.' })
   async removeSpecificCartItem(userId: string, itemId: string): Promise<Cart> {
     const cart = await this.cartModel.findOneAndUpdate(
       { user: userId },
@@ -103,8 +87,6 @@ export class CartsService {
     return cart;
   }
 
-  @ApiResponse({ status: 200, description: 'User cart cleared successfully.' })
-  @ApiResponse({ status: 404, description: 'Cart not found.' })
   async clearUserCart(userId: string): Promise<Cart> {
     const cart = await this.cartModel.findOneAndDelete({ user: userId });
     if (!cart) {
@@ -113,11 +95,6 @@ export class CartsService {
     return cart;
   }
 
-  @ApiResponse({
-    status: 200,
-    description: 'Cart item quantity updated successfully.',
-  })
-  @ApiResponse({ status: 404, description: 'Cart or item not found.' })
   async updateCartItemQuantity(
     userId: string,
     itemId: string,

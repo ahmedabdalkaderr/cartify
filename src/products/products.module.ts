@@ -14,4 +14,4 @@ import { Vendor, VendorSchema } from 'src/vendors/vendor.schema';
   controllers: [ProductsController],
   providers: [ProductsService, VendorsService],
 })
-export class ProductModule {}
+export class ProductsModule {}

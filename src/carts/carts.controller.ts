@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { CartsService } from './carts.service';
 import { AddProductToCartDto } from './dtos/add-product.dto';
-import { ApiTags, ApiBody, ApiResponse } from '@nestjs/swagger';
+import { ApiTags, ApiBody, ApiResponse, ApiOperation } from '@nestjs/swagger';
 import { MongoIdValidationPipe as isMongoId } from '../customs-pipes/mongo-validation';
 
 @ApiTags('carts')
@@ -19,17 +19,18 @@ export class CartsController {
   constructor(private readonly cartsService: CartsService) {}
 
   @Post()
+  @ApiOperation({ summary: 'Create a cart for user' })
   @ApiBody({ type: AddProductToCartDto })
   @ApiResponse({
     status: 201,
     description: 'Product added to cart successfully.',
   })
-  @ApiResponse({ status: 404, description: 'Not Found' })
-  @ApiResponse({ status: 400, description: 'Bad ' })
+  @ApiResponse({ status: 404, description: 'Cart not found' })
   async addProductToCart(@Body() addProductToCartDto: AddProductToCartDto) {
     return await this.cartsService.addProductToCart(addProductToCartDto);
   }
   @Get()
+  @ApiOperation({ summary: 'Get user cart' })
   @ApiResponse({
     status: 200,
     description: 'Retrieved user cart successfully.',
@@ -41,6 +42,7 @@ export class CartsController {
   }
 
   @Delete(':itemId')
+  @ApiOperation({ summary: 'Delete specific item from user cart' })
   @ApiResponse({ status: 200, description: 'Cart item removed successfully.' })
   @ApiResponse({ status: 404, description: 'Cart not found.' })
   async removeSpecificCartItem(
@@ -51,13 +53,16 @@ export class CartsController {
   }
 
   @Delete()
+  @ApiOperation({ summary: 'Delete user cart' })
   @ApiResponse({ status: 200, description: 'User cart cleared successfully.' })
   @ApiResponse({ status: 400, description: 'Invalid mongo id format.' })
+  @ApiResponse({ status: 404, description: 'Not found exception' })
   async clearUserCart(@Query('user', isMongoId) userId: string) {
     return await this.cartsService.clearUserCart(userId);
   }
 
   @Put(':itemId')
+  @ApiOperation({ summary: 'Update quantity of specific cart item' })
   @ApiBody({
     schema: {
       type: 'object',

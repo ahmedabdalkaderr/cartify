@@ -32,16 +32,11 @@ export class UsersService {
     return await user.save();
   }
 
-  @ApiOperation({ summary: 'Get all users' })
-  @ApiResponse({ status: 200, description: 'Users retrieved successfully.' })
   async findAllUsers(): Promise<User[]> {
     const users = await this.userModel.find();
     return users;
   }
 
-  @ApiOperation({ summary: 'Find a user by ID' })
-  @ApiResponse({ status: 200, description: 'User found.' })
-  @ApiResponse({ status: 404, description: 'User not found.' })
   async findUserById(userId: string): Promise<User> {
     const user = await this.userModel.findById(userId);
     if (!user) {
@@ -50,9 +45,6 @@ export class UsersService {
     return user;
   }
 
-  @ApiOperation({ summary: 'Update a user by ID' })
-  @ApiResponse({ status: 200, description: 'User updated successfully.' })
-  @ApiResponse({ status: 404, description: 'User not found.' })
   async updateUser(userId: string, updateData: UpdateUserDto): Promise<User> {
     if (updateData.password) {
       updateData.password = await bcrypt.hash(updateData.password, 10);
@@ -69,9 +61,6 @@ export class UsersService {
     return updatedUser;
   }
 
-  @ApiOperation({ summary: 'Delete a user by ID' })
-  @ApiResponse({ status: 200, description: 'User deleted successfully.' })
-  @ApiResponse({ status: 404, description: 'User not found.' })
   async deleteUser(userId: string): Promise<User> {
     const deletedUser = await this.userModel.findByIdAndDelete(userId);
 

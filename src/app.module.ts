@@ -3,10 +3,11 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './users/users.module';
-import { ProductModule } from './products/products.module';
-import { VendorModule } from './vendors/vendors.module';
+import { UsersModule } from './users/users.module';
+import { ProductsModule } from './products/products.module';
+import { VendorsModule } from './vendors/vendors.module';
 import { CartsModule } from './carts/carts.module';
+import { CartsService } from './carts/carts.service';
 
 @Module({
   imports: [
@@ -15,9 +16,9 @@ import { CartsModule } from './carts/carts.module';
       envFilePath: './.env',
     }),
     MongooseModule.forRoot(process.env.URI),
-    UserModule,
-    ProductModule,
-    VendorModule,
+    UsersModule,
+    ProductsModule,
+    VendorsModule,
     CartsModule,
   ],
   controllers: [AppController],
