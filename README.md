@@ -44,7 +44,7 @@ This project is a backend service designed for managing a simple e-commerce syst
 ![image](https://github.com/user-attachments/assets/172f366a-bc65-4171-939c-c6bfb19fe969)
 
   This diagram describe roles and actions in this app. I focused more on customer and vendor actions instead of admin
-  because i didn't implement auth module to handle some privileges.
+  because i didn't merge auth module to handle some privileges.
 
 
 
