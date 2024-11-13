@@ -52,7 +52,7 @@ This project is a backend service designed for managing a simple e-commerce syst
 
 1. **Clone the repository**
     ```bash
-      git clone https://github.com/ahmedabdalkaderr/dinamo-task.git
+      git clone https://github.com/ahmedabdalkaderr/cartify.git
     ```
 2. **Install dependencies**
     ```
