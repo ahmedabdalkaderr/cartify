@@ -7,6 +7,7 @@ import {
   Put,
   Delete,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import {
   ApiTags,
@@ -23,6 +24,7 @@ import { Product } from './product.schema';
 import { MongoIdValidationPipe as isMongoId } from '../customs-pipes/mongo-validation';
 
 @ApiTags('Products')
+// @UseGuards()
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
